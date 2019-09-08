@@ -7,9 +7,8 @@ def questions(score1, score2):
     global injury2percent
     injury2percent = abs(round(injury1percent - 100))
 
+
 def bothscores():
-    score1 = 0
-    score2 = 0
     while True:
         try:
             score1 = int(input("What is the first DASH, NDI, Roland Morris or Oswestry Score?   "))
@@ -25,7 +24,7 @@ def bothscores():
         except ValueError:
             print("Make sure to enter a numerical value! ")
 
-#loop returns to score one, instead score two... figure that out
+#loop returns to score one with non int input, instead of score two... figure that out
 
 
 bothscores()
