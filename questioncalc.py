@@ -1,15 +1,9 @@
 
-def questions(score1, score2):
-    injury1 = score1/score2
-    global injury1percent
-    injury1percent = round(injury1 * 100)
-    global injury2percent
-    injury2percent = abs(round(injury1percent - 100))
-
-
 def final():
     if score1 < score2:
-        questions(score1, score2)
+        injury1 = score1 / score2
+        injury1percent = round(injury1 * 100)
+        injury2percent = round(100 - injury1percent)
         print(injury1percent, "% can be attributed to injury 1 and", injury2percent,
                               "% can be attributed to injury 2")
     else:
@@ -24,7 +18,7 @@ while True:
         print("Make sure to enter a numerical value! ")
 while True:
     try:
-        score2 = int(input("What is the second score?   "))
+        score2 = int(input("What is the second DASH, NDI, Roland Morris or Oswestry Score?   "))
         break
     except ValueError:
         print("Make sure to enter a numerical value! ")
