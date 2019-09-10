@@ -1,8 +1,8 @@
 
 def final():
     if score1 < score2:
-        injury1 = score1 / score2
-        injury1percent = round(injury1 * 100)
+        ratio = score1 / score2
+        injury1percent = round(ratio * 100)
         injury2percent = round(100 - injury1percent)
         print(injury1percent, "% can be attributed to injury 1 and", injury2percent,
                               "% can be attributed to injury 2")
